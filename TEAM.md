@@ -65,3 +65,18 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Bằng chứng
 
 - Commit `ce165fe`, `eef9936`, `3ac6e21`; báo cáo cá nhân `report/team/2A202603575_NguyenKhanhDuy.md`.
+
+## Nguyễn Xuân Hùng - 2A202603599
+
+### Phần việc phụ trách
+
+- Người viết code (CP1, CP2) và kiểm tra kỹ thuật xuyên suốt buổi lab.
+
+### Đóng góp cụ thể
+
+- CP1 & CP2: Hoàn thiện code `src/lab13.py` (3 hàm A1 vượt qua `kiem_tra_dap_an_biet_truoc()`, `mo_hinh()`, `in_chi_tiet_a2()`, `chay_nhiem_vu_a3()`, `chay_nhiem_vu_a4()`, `chay_nhiem_vu_b()` cho toàn bộ bảng A1–A4 và B1–B4).
+- Chuyển giao vai viết code CP4 cho thành viên khác sau giờ giải lao; kiểm chứng `yaml.safe_load` cho `report/team/pilot_plan.yaml` và rà soát đối chiếu số liệu hồ sơ CP1–CP5.
+
+### Bằng chứng
+
+- Commit `e664b31`, `5dfab85`; báo cáo cá nhân `report/team/2A202603599_NguyenXuanHung.md`.
