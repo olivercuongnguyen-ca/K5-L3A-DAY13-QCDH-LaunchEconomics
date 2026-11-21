@@ -201,6 +201,36 @@ def chay_nhiem_vu_b(runs, reqs):
         print(f'{nhan:35s} -> Tong: {tong_b4:>10,.0f} d | CPS [sim]: {cps_b4:>6,.0f} d ({cps_b4 / BASELINE:.2f}x) | Hoa von xem lai <= {hoa_von:.1f} phut')
 
 
+def chay_nhiem_vu_d(reqs):
+    """Nhiem vu D: co mau (D1) va ty le mo lai hien tai (D3)."""
+    from statsmodels.stats.proportion import proportion_effectsize
+    from statsmodels.stats.power import NormalIndPower
+    ICC, ALPHA, POWER = 0.02, 0.05, 0.8
+
+    def co_mau(p1, p2):
+        es = proportion_effectsize(p2, p1)
+        return NormalIndPower().solve_power(es, alpha=ALPHA, power=POWER, ratio=1.0)
+
+    print('\n=== D1 · Co mau (baseline 0,70; alpha 0,05; power 0,8; ICC 0,02) ===')
+    n_a = co_mau(0.70, 0.75)
+    print(f'a) Chia theo yeu cau, +5 diem: {n_a:,.0f} moi nhom')
+    de_b = 1 + (75 - 1) * ICC
+    n_b = n_a * de_b
+    print(f'b) m=75: DE={de_b:.2f}; n={n_b:,.0f} moi nhom; {n_b / 75:.1f} nhan vien/nhom, tong {2 * n_b / 75:.0f} (co 40)')
+    print(f'c) 20 nhan vien/nhom: toi da {20 / ICC:,.0f} < {n_a:,.0f}: {"dat" if 20 / ICC >= n_a else "khong dat"}')
+    print(f'd) 6 depot/nhom: toi da {6 / ICC:,.0f}')
+    n6 = 859  # de bai cho san (statsmodels ra ~857)
+    m_e = math.ceil(n6 * (1 - ICC) / (20 - n6 * ICC))
+    print(f'e) +6 diem: n={n6:,.0f}; m >= {m_e} yeu cau/nguoi (DE {1 + (m_e - 1) * ICC:.2f})')
+    es = proportion_effectsize(0.75, 0.70)
+    print(f'   power neu thuc te +5 diem, n=859: {NormalIndPower().power(es, nobs1=859, alpha=ALPHA):.2f}')
+
+    print('\n=== D3 · Ty le mo lai trong 7 ngay ===')
+    print(f'Toan mau: {reqs.mo_lai_trong_7_ngay.mean():.2%} ({int(reqs.mo_lai_trong_7_ngay.sum())}/{len(reqs)})')
+    pv = reqs[reqs.loai.isin(['noi_dia', 'hang_nang'])]
+    print(f'noi_dia + hang_nang: {pv.mo_lai_trong_7_ngay.mean():.2%} ({int(pv.mo_lai_trong_7_ngay.sum())}/{len(pv)})')
+
+
 if __name__ == '__main__':
     runs = pd.read_csv('logix_runs.csv')
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
@@ -212,6 +242,4 @@ if __name__ == '__main__':
     chay_nhiem_vu_a3(runs, reqs)
     chay_nhiem_vu_a4(runs, reqs)
     chay_nhiem_vu_b(runs, reqs)
-    # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
-    #   from statsmodels.stats.proportion import proportion_effectsize
-    #   from statsmodels.stats.power import NormalIndPower
+    chay_nhiem_vu_d(reqs)
