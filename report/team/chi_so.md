@@ -22,7 +22,9 @@ Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý 
 | `agent_run_completed` | Agent | attempt, tokens_in, tokens_out, tool_calls, status, trace_id | Sau mỗi lần chạy, kể cả lần lỗi |
 | `agent_suggestion_shown` | Giao diện nhân viên | staff_id, so_tien_de_xuat, trace_id | Khi gợi ý hiện ra |
 | `staff_review_decision` | Nhân viên | quyet_dinh (giu/sua/bo), phut_xem_lai (đo thật), trace_id | Khi bấm gửi, sửa hoặc bỏ |
+| `staff_rework_completed` | Nhân viên | phut_lam_lai (đo thật), ly_do, trace_id | Khi nhân viên làm lại xong ca lỗi |
 | `refund_ledger_write` | Dịch vụ sổ cái | idempotency_key, so_tien, ket_qua, trace_id | Khi ghi sổ hoàn tiền |
+| `handoff_to_staff` | Agent | reason, tom_tat, trace_id | Khi chuyển yêu cầu sang nhân viên |
 | `ticket_closed` | Hệ thống ticket | closed_at, trace_id | Khi đóng yêu cầu |
 | `ticket_reopened` | Khách | reopened_at, ly_do, trace_id | Khi khách mở lại |
 | `audit_sample_checked` | Kế toán | so_tien_da_hoan, so_tien_dung, trace_id | Hằng tuần, mẫu 100 đơn |
@@ -33,7 +35,7 @@ Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý 
 - Chỉ số dùng (bỏ qua gợi ý): `staff_review_decision` với `quyet_dinh` là sửa hoặc bỏ, chia số `staff_review_decision`.
 - Chỉ số dùng tự đề xuất (% mở bằng trợ lý): `agent_suggestion_shown` chia `refund_request_created` của nhóm trợ lý.
 - Chỉ số an toàn: `ticket_reopened` chia `refund_request_created`.
-- Chỉ số an toàn tự đề xuất: `audit_sample_checked`; cả năm chỉ số đều tính được từ danh sách event, nối bằng `trace_id`.
+- Chỉ số an toàn tự đề xuất: `audit_sample_checked`; ngoài ra `staff_rework_completed` và `handoff_to_staff` giúp đo thật phút làm lại, tỉ lệ làm lại hằng tuần và tỉ lệ chuyển nhân viên. Cả năm chỉ số và các ngưỡng rủi ro đều tính được từ danh sách 10 event, nối bằng `trace_id`.
 
 ## E2 · Rủi ro kinh tế
 

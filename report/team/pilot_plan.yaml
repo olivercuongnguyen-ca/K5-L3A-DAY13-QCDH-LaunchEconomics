@@ -51,7 +51,7 @@ pilot:
     predeclared: "Có: chỉ số chính, ngưỡng, luật dừng và ngày quyết định chốt trong file này trước ngày bắt đầu pilot"
   stop_rules:
     - "NẾU mở lại 7 ngày của nhóm trợ lý cao hơn đối chứng từ 2 điểm hoặc vượt 6%, hoặc có từ 1 ca hoàn trùng TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành tắt trợ lý trong 30 phút và chuyển toàn bộ về nhân viên KHÔNG THÌ không được sang bước rollout tiếp theo"
-    - "NẾU chi phí mỗi việc thành công cao hơn 8.000 đ (simulated) TRONG 2 tuần liên tiếp THÌ Quản lý sản phẩm trợ lý thu hẹp về noi_dia và giới hạn 2 lần chạy KHÔNG THÌ không được mở hang_nang"
+    - "NẾU chi phí mỗi việc thành công cao hơn 8.000 đ (simulated) TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp về noi_dia và giới hạn 2 lần chạy KHÔNG THÌ không được mở hang_nang"
     - "NẾU tỉ lệ nhân viên bỏ qua gợi ý của trợ lý cao hơn 40% TRONG 1 tuần THÌ Trưởng nhóm CSKH phỏng vấn 5 nhân viên trong 3 ngày làm việc KHÔNG THÌ không được chuyển sang bước rollout tiếp theo"
   interim_looks: "chỉ kiểm tra chỉ số an toàn"
   rollback: "Giám đốc vận hành bấm cờ tắt, hiệu lực trong 30 phút; khách được phục vụ bằng luồng nhân viên tự làm như trước pilot"
