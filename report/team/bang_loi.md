@@ -4,49 +4,55 @@
 
 ## Hai bộ nhãn độc lập
 
-Người gắn nhãn 1: (chờ điền) · Người gắn nhãn 2: (đã gắn xong, cột bên dưới) (gắn trong 8 phút, không trao đổi)
+Người gắn nhãn 1: Thành viên gắn nhãn 1 · Người gắn nhãn 2: Thành viên gắn nhãn 2 (gắn trong 8 phút, không trao đổi)
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | ? (chờ người 1) | Do người dùng | ? | ? |
-| 2 | ? (chờ người 1) | Hệ thống | ? | ? |
-| 3 | ? (chờ người 1) | Ngữ cảnh | ? | ? |
-| 4 | ? (chờ người 1) | Giới hạn hệ thống | ? | ? |
-| 5 | ? (chờ người 1) | Ngầm | ? | ? |
-| 6 | ? (chờ người 1) | Do người dùng | ? | ? |
-| 7 | ? (chờ người 1) | Hệ thống | ? | ? |
-| 8 | ? (chờ người 1) | Ngầm | ? | ? |
-| 9 | ? (chờ người 1) | Do người dùng | ? | ? |
-| 10 | ? (chờ người 1) | Ngữ cảnh | ? | ? |
-| 11 | ? (chờ người 1) | Giới hạn hệ thống | ? | ? |
-| 12 | ? (chờ người 1) | Ngầm | ? | ? |
-| 13 | ? (chờ người 1) | Giới hạn hệ thống | ? | ? |
-| 14 | ? (chờ người 1) | Do người dùng | ? | ? |
-| 15 | ? (chờ người 1) | Hệ thống | ? | ? |
-| 16 | ? (chờ người 1) | Ngữ cảnh | ? | ? |
-| 17 | ? (chờ người 1) | Ngầm | ? | ? |
-| 18 | ? (chờ người 1) | Ngữ cảnh | ? | ? |
-| 19 | ? (chờ người 1) | Giới hạn hệ thống | ? | ? |
-| 20 | ? (chờ người 1) | Hệ thống | ? | ? |
+| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Hệ thống | Ngầm | Không | Hệ thống |
+| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | Có | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** ? / 20 = ?% (chờ bộ nhãn của người 1)
+**Tỉ lệ đồng thuận:** 19 / 20 = 95%
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- (Điền sau khi so nhãn. Các ca người 2 thấy dễ lệch: 8 (Ngầm hay Hệ thống), 13 (Giới hạn hay Hệ thống), 18 (Ngữ cảnh hay Hệ thống), 2 (Hệ thống hay Ngầm).)
+- **Ca 8 (`Hệ thống`, không phải `Ngầm`):** Trích dẫn sai "Điều 7.2" không tồn tại là lỗi **`Hệ thống`** vì nội dung sai đã lộ trực tiếp trong tin nhắn gửi khách, còn `Ngầm` chỉ dùng khi không ai nhận ra lỗi cho tới khi kiểm tra mẫu hoặc đối soát.
+
+*(Ghi chú thêm ranh giới cho các ca dễ lệch mà hai người đã lưu ý để thống nhất khi bảo vệ):*
+
+- **Ca 2 và Ca 15 (`Hệ thống`, không phải `Ngầm`):** Lỗi gọi sai tham số bảng giá (khách phát hiện mở lại) và tính sai 100% thay vì 50% (nhân viên xem lại bắt được) đều đã lộ ra trước hoặc ngay khi giao dịch diễn ra.
+- **Ca 6 và Ca 9 (`Do người dùng`, không phải `Hệ thống`):** Gốc lỗi là khách chọn sai danh mục hoặc nhập sai mã sàn TMĐT thay vì mã vận đơn; việc chưa tự gợi ý nằm ở giải pháp khắc phục.
+- **Ca 13 (`Giới hạn hệ thống`, không phải `Hệ thống`):** Bảo hiểm của đối tác nằm ngoài phạm vi trợ lý nên gốc lỗi là giới hạn hệ thống dù câu từ chối còn chung chung.
+- **Ca 18 (`Ngữ cảnh`, không phải `Hệ thống`):** Số tiền 15.000 đ hoàn đúng chính sách 50%, lỗi phát sinh do giả định khách tự hiểu cách tính không khớp hoàn cảnh thực tế.
+- **Ca 12 (`Ngầm`, không phải `Hệ thống`):** Kết quả vẫn đúng nhưng chi phí token depot D05 tăng gấp 3 lần suốt 3 tuần không ai thấy, cho thấy lỗi ngầm bao gồm cả sai lệch về chi phí.
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
-
-*Bản nháp của người gắn nhãn 2 theo nhãn riêng; kiểm lại sau khi thống nhất nhãn.*
 
 Cách phát hiện phải đo được (event, ngưỡng, tần suất). Người phụ trách là một vai trò, không ghi "cả đội".
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| 9 | Do người dùng | Event `intent_rejected` với lý do `invalid_order_id` > 5% số yêu cầu/tuần (theo dõi hằng tuần) | Dò định dạng mã vận đơn ngay lúc nhập; nếu giống mã sàn TMĐT thì gợi ý nơi tìm mã vận đơn thay vì chỉ báo lỗi | Quản lý sản phẩm trợ lý |
-| 7 | Hệ thống | Đối soát mỗi giờ: tin nhắn “đã hoàn” không có bản ghi sổ cái ok cùng `trace_id`; ngưỡng 0 ca | Chỉ báo “đã hoàn” khi sổ cái trả ok; lỗi 503 sau 3 lần thì báo “đang xử lý” và chuyển nhân viên | Kỹ sư trưởng agent |
-| 10 | Ngữ cảnh | Tỉ lệ mở lại trong 7 ngày của đơn bị từ chối do bất khả kháng > 10%/tuần | Hiện cảnh báo bất khả kháng cạnh “cam kết 24 giờ” trong ứng dụng; trợ lý giải thích điều khoản khi từ chối | Quản lý vận hành CSKH |
-| 19 | Giới hạn hệ thống | Event `out_of_data_window` đếm hằng tuần; theo dõi nếu > 2% yêu cầu | Giữ cách xử lý hiện tại (nói rõ + chuyển nhân viên kèm tóm tắt); nhân viên phản hồi trong 4 giờ làm việc | Trưởng nhóm CSKH |
-| 17 | Ngầm | Kiểm tra mẫu hằng tuần 100 đơn so với bảng giá hiện hành; ngưỡng sai lệch > 1% đơn; thêm cảnh báo khi phiên bản bảng giá của cache khác bản gốc | Gắn phiên bản bảng giá vào cache, hết hạn khi bảng giá đổi; quét hoàn bù cho 212 đơn bị lệch | Kỹ sư dữ liệu |
+| 9 | Do người dùng | Event `input_validation_failed` có `trace_id`; cảnh báo khi tỉ lệ vượt 2% tổng yêu cầu mỗi ngày | Nhận diện định dạng mã sàn TMĐT để tự tra chéo sang mã vận đơn LogiX; nếu không tra được thì hiển thị hướng dẫn kèm ảnh vị trí mã vận đơn | PM trợ lý hoàn phí |
+| 7 | Hệ thống | Job đối soát mỗi giờ theo `trace_id`: đếm số tin nhắn báo "đã hoàn" nhưng thiếu event `refund_ledger_write` trạng thái `ok`; ngưỡng cảnh báo > 0 ca | Chỉ cho phép gửi thông báo "đã hoàn tiền thành công" khi API sổ cái trả `ok`; nếu lỗi 503 sau 3 lần thử thì báo "đang xử lý" và tạo event `handoff_to_staff` | Kỹ sư trưởng agent |
+| 18 | Ngữ cảnh | Tổng hợp hằng tuần event `ticket_reopened` có `trace_id` và lý do thắc mắc số tiền hoàn dù kiểm tra lại cho thấy tiền hoàn đúng; ngưỡng cảnh báo > 1% yêu cầu/tuần | Bổ sung phép tính cụ thể vào mẫu tin nhắn phản hồi (ví dụ: `30.000 đ × 50% = 15.000 đ`) để khách đối chiếu ngay | Trưởng nhóm CSKH |
+| 4 | Giới hạn hệ thống | Event `handoff_to_staff` có `trace_id` và `reason = thieu_du_lieu_chang_ngoai`, thống kê hằng ngày theo cột `loai`; cảnh báo khi vượt 5% trong phạm vi pilot | Duy trì luồng chuyển ngay cho nhân viên kèm bản tóm tắt ca; loại nhóm yêu cầu `quoc_te` ra khỏi phạm vi pilot | PM trợ lý hoàn phí |
+| 17 | Ngầm | Event `audit_sample_checked` gắn `trace_id` khi kiểm tra mẫu 100 đơn ngẫu nhiên mỗi tuần so với bảng giá hiện hành; ngưỡng cảnh báo > 1% đơn lệch tiền | Tự động xoá bộ nhớ đệm khi có cập nhật bảng giá mới và ghi kèm mã phiên bản bảng giá vào từng `trace_id` | Kế toán trưởng |
