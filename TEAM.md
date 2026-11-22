@@ -4,17 +4,17 @@
 
 - Tên nhóm: QCDH
 - Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- Repo nhóm: `K5-L3A-DAY13-QCDH-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt: https://github.com/olivercuongnguyen-ca/K5-L3A-DAY13-QCDH-LaunchEconomics · `main` · (điền commit chốt)
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Nguyễn Hoàng Cương | 2A202603568 | (điền) | (điền) | Người gắn nhãn 2 kiêm giữ hồ sơ |
+|   1 | Nguyễn Hoàng Cương | 2A202603568 | hcuong.ng.ca@gmail.com | olivercuongnguyen-ca | Người gắn nhãn 2 kiêm giữ hồ sơ |
 |   2 | Vũ Trọng Quang | 2A202603535 | trongquangvu2004@gmail.com | Quangvu256 | Người gắn nhãn 1 |
 |   3 | Nguyễn Xuân Hùng | 2A202603599 | xuanhung17032003@gmail.com | XuanHung1703 | Người viết code (CP1, CP2) |
-|   4 | (điền) | (điền) | (điền) | ZuyNoNguyen | Người kiểm số |
+|   4 | Nguyễn Khánh Duy | 2A202603575 | duynguyen77621@gmail.com | ZuyNoNguyen | Người kiểm số |
 
 Bốn vai của lab:
 
@@ -50,3 +50,33 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Bằng chứng
 
 - Commit `af6a3ae`, `21ffbe4`, `ee27f82`; báo cáo cá nhân `report/team/2A202603568_NguyenHoangCuong.md`.
+
+## Nguyễn Khánh Duy - 2A202603575
+
+### Phần việc phụ trách
+
+- Người kiểm số (CP1, CP2) và rà soát đối chiếu số liệu CP5.
+
+### Đóng góp cụ thể
+
+- CP1 & CP2: Đối chiếu kết quả `src/lab13.py`, hoàn thiện bảng A1–A4 và B1–B4 trong `report/team/bang_chi_phi.md` (đầy đủ nhãn `simulated`, câu trả lời $\le 3$ dòng có số).
+- CP5: Rà soát và vá 3 lỗ hổng liên kết trong `chi_so.md` (bổ sung `staff_rework_completed`, `handoff_to_staff` đủ 10 event có `trace_id`), `ho_so_launch_v0.md` và `pilot_plan.yaml`.
+
+### Bằng chứng
+
+- Commit `ce165fe`, `eef9936`, `3ac6e21`; báo cáo cá nhân `report/team/2A202603575_NguyenKhanhDuy.md`.
+
+## Nguyễn Xuân Hùng - 2A202603599
+
+### Phần việc phụ trách
+
+- Người viết code (CP1, CP2) và kiểm tra kỹ thuật xuyên suốt buổi lab.
+
+### Đóng góp cụ thể
+
+- CP1 & CP2: Hoàn thiện code `src/lab13.py` (3 hàm A1 vượt qua `kiem_tra_dap_an_biet_truoc()`, `mo_hinh()`, `in_chi_tiet_a2()`, `chay_nhiem_vu_a3()`, `chay_nhiem_vu_a4()`, `chay_nhiem_vu_b()` cho toàn bộ bảng A1–A4 và B1–B4).
+- Chuyển giao vai viết code CP4 cho thành viên khác sau giờ giải lao; kiểm chứng `yaml.safe_load` cho `report/team/pilot_plan.yaml` và rà soát đối chiếu số liệu hồ sơ CP1–CP5.
+
+### Bằng chứng
+
+- Commit `e664b31`, `5dfab85`; báo cáo cá nhân `report/team/2A202603599_NguyenXuanHung.md`.
